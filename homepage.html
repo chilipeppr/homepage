@@ -1,0 +1,516 @@
+<style type="text/css">
+    #root #mainnav {
+        margin-bottom: 0;
+    }
+    
+    .main-page-container h2 {
+        font-size: 52px;
+    }
+    
+    .main-page-container h4 {
+        font-size: 32px;
+    }
+    
+    #usercontrib h4 {
+        font-size: 18px;
+    }
+    
+    #usercontrib .com-chilipeppr-ws-billboard-url,
+    #usercontrib .billboard-url {
+        font-size: 12px;
+    }
+    
+    .main-page-container .com-chilipeppr-ws-billboard-url,
+    .main-page-container .billboard-url {
+        font-size: 20px;
+    }
+    
+    .main-page-container .com-chilipeppr-wsgrid .com-chilipeppr-ws-billboard-desc,
+    .main-page-container .com-chilipeppr-wsgrid .billboard-desc {
+        height: initial;
+    }
+    
+    #pnlBody .container-fluid,
+    .main-page-container {
+        padding: 0;
+    }
+    
+    .jumbotron {
+        /* margin-top:20px; */
+        border-radius: 6px;
+        padding: 50px 15%;
+        text-align: center;
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    .main-page-container #com-chilipeppr-homepage-wspicker .com-chilipeppr-wsgrid {
+        padding: 30px 15%;
+    }
+    
+    .dropimage {
+        height: 100px;
+        /* float:left; */
+        line-height: 260px;
+        /* padding-right:20px; */
+    }
+    
+    .chilipeppr-name {
+        color: #bebebe;
+    }
+    
+    .chilipeppr-subname {
+        color: #777;
+    }
+    
+    #com-chilipeppr-homepage-wspicker {
+        margin-bottom: 30px;
+    }
+    
+    .spjs-img {
+        background-position: center;
+        background-size: cover;
+        /* opacity: 0.5; */
+    }
+</style>
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    cprequire(["chilipeppr_ready"], function() {
+
+        chilipeppr.load("#com-chilipeppr-homepage-wspicker",
+            "http://fiddle.jshell.net/chilipeppr/8UwSX/show/light");
+
+        $('.downloadSpjs').click(function() {
+            console.log("download spjs");
+            window.location.href = "http://github.com/chilipeppr/serial-port-json-server";
+        })
+    });
+
+    //]]>
+</script>
+
+<div class="container-fluid main-page-container">
+    <div class="jumbotron">
+        <h2 style="margin-bottom:20px;"><img class="dropimage" src="http://www.chilipeppr.com/img/chilipeppr_logo.png" style=""> <span class="chilipeppr-name">ChiliPeppr</span> <span class="chilipeppr-subname">Hardware&nbsp;Fiddle</span></h2>
+
+        <p class="lead">Create Javascript software workspaces that talk to your hardware. Use one of our hugely popular workspaces or create your own by forking one you like.</p>
+    </div>
+
+    <div id="com-chilipeppr-homepage-wspicker">
+        <!-- start chilipeppr.load() url: http://fiddle.jshell.net/chilipeppr/8UwSX/show/light -->
+
+        <style type="text/css">
+            #com-chilipeppr-wspicker-collapsed {
+                position: absolute;
+                top: 0px;
+                right: 4px;
+                width: 32px;
+                height: 160px;
+                background-color: #f6f6f6;
+            }
+            
+            #com-chilipeppr-wspicker-collapsed .panel-body {
+                padding: 3px;
+            }
+            
+            #com-chilipeppr-wspicker-collapsed .rotate-div {
+                position: relative;
+                width: 24px;
+                top: 10px;
+                left: 0;
+                border: 0px solid red;
+            }
+            
+            #com-chilipeppr-wspicker-collapsed .rotate {
+                padding: 0;
+                margin: 0;
+                -moz-transform: rotate(90.0deg);
+                /* FF3.5+ */
+                -o-transform: rotate(90.0deg);
+                /* Opera 10.5 */
+                -webkit-transform: rotate(90.0deg);
+                /* Saf3.1+, Chrome */
+                filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=-0.083);
+                /* IE6,IE7 */
+                -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.083)";
+                /* IE8 */
+            }
+            
+            #com-chilipeppr-wspicker-toggle-btn-rt {
+                border-radius: 4px;
+            }
+            
+            #com-chilipeppr-wspicker {
+                padding: 0;
+            }
+            
+            .com-chilipeppr-wspicker-row {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #dddddd;
+            }
+            
+            .com-chilipeppr-wspicker-row .dropdown-toggle {
+                border: 0;
+            }
+            
+            .com-chilipeppr-wspicker-img {
+                width: 100%;
+            }
+            
+            .com-chilipeppr-wspicker-btnbar {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+            }
+            
+            .com-chilipeppr-wspicker-btn {}
+            
+            .com-chilipeppr-wspicker-stats2 {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                padding: 4px 10px 10px 10px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            
+            .com-chilipeppr-wspicker-imgcontain {
+                border: 0px solid red;
+                border-radius: 5px;
+                position: relative;
+                width: 100%;
+                height: 160px;
+                background-position: center;
+                background-size: cover;
+            }
+            
+            .com-chilipeppr-wspicker-btnbar2 {
+                padding-top: 10px;
+            }
+            
+            @media (min-width: 768px) {
+                .com-chilipeppr-wsgrid .com-chilipeppr-ws-billboard-desc {
+                    /* height: 160px; */
+                    overflow: auto;
+                    /* overflow:ellipsis; */
+                }
+            }
+        </style>
+
+
+        <!-- Workspace Grid (Like Kickstarter Grid) -->
+        <!-- 3 cols by N rows -->
+        <div class="container-fluid com-chilipeppr-wsgrid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- TinyG  -->
+                    <div id="com-chilipeppr-wsgrid-tinyg" class="com-chilipeppr-wspicker-item">
+
+                        <div id="com-chilipeppr-ws-billboard-tinyg">
+                            <div class="com-chilipeppr-ws-billboard-content">
+                                <h4 class="com-chilipeppr-ws-billboard-title" style="">TinyG Workspace</h4>
+
+                                <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/tinyg">chilipeppr.com/tinyg</a>
+
+                                </p>
+                                <div class="com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                    <a href="http://chilipeppr.com/tinyg">
+                                        <div class="com-chilipeppr-ws-billboard-img" style="background-image: url('http://chilipeppr.com/img/tinyg.jpg')"></div>
+                                    </a>
+                                    <div class="com-chilipeppr-ws-billboard-stats2">
+
+                                    </div>
+                                </div>
+                                <!-- end img div container -->
+                                <p class="com-chilipeppr-ws-billboard-desc">This workspace is a full-blown Gcode sender for your TinyG. The workspace connects to your TinyG via the serial port over the ChiliPeppr Serial Port JSON Server. It lets you view your Gcode in 3D, view the XYZA positions,
+                                    perform jogging, and see advanced real-time details from the TinyG.</p>
+                            </div>
+                        </div>
+
+                        <!-- end chilipeppr.load() url: http://fiddle.jshell.net/chilipeppr/Guvv4/show/light -->
+                    </div>
+                    <!-- end TinyG  Milling -->
+                </div>
+                <div class="col-lg-6">
+                    <!-- Grbl -->
+                    <div id="com-chilipeppr-wsgrid-grbl" class="com-chilipeppr-wspicker-item">
+
+                        <div id="com-chilipeppr-ws-billboard-grbl">
+                            <div class="com-chilipeppr-ws-billboard-content">
+                                <h4 class="com-chilipeppr-ws-billboard-title" style="">Grbl Workspace</h4>
+
+                                <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/grbl">chilipeppr.com/grbl</a>
+
+                                </p>
+                                <div class="com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                    <a href="http://chilipeppr.com/grbl">
+                                        <div class="com-chilipeppr-ws-billboard-img" style="background-image: url('https://www.synthetos.com/wp-content/uploads/2013/02/grblShieldBundle800-800x360.jpg')"></div>
+                                    </a>
+                                    <div class="com-chilipeppr-ws-billboard-stats2">
+
+                                    </div>
+                                </div>
+                                <!-- end img div container -->
+                                <p class="com-chilipeppr-ws-billboard-desc">Grbl devices are now supported inside ChiliPeppr. The workspace connects to your Arduino via the serial port over the ChiliPeppr Serial Port JSON Server. Maintained by Jarret Luft.</p>
+                            </div>
+                        </div>
+
+                        <!-- end chilipeppr.load() url: http://fiddle.jshell.net/chilipeppr/6z76Z/show/light -->
+                    </div>
+                    <!-- end Grbl -->
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <!-- Basic Serial Port Communicator -->
+                    <div id="com-chilipeppr-wsgrid-serialport" class="com-chilipeppr-wspicker-item">
+
+                        <div id="com-chilipeppr-ws-billboard-serialport">
+                            <div class="com-chilipeppr-ws-billboard-content">
+                                <h4 class="com-chilipeppr-ws-billboard-title" style="">Serial Port Workspace</h4>
+
+                                <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/serialport">chilipeppr.com/serialport</a>
+
+                                </p>
+                                <div class="com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                    <a href="http://chilipeppr.com/serialport">
+                                        <div class="com-chilipeppr-ws-billboard-img" style="background-image: url('http://arduino.cc/es/uploads/Main/arduino_uno_test.jpg')"></div>
+                                    </a>
+                                    <div class="com-chilipeppr-ws-billboard-stats2">
+
+                                    </div>
+                                </div>
+                                <!-- end img div container -->
+                                <p class="com-chilipeppr-ws-billboard-desc">This is a workspace for a generic Serial Port console for ChiliPeppr's Hardware Fiddle. This workspace depends on ChiliPeppr's Serial Port JSON Server.</p>
+                            </div>
+                        </div>
+
+                        <!-- end chilipeppr.load() url: http://fiddle.jshell.net/chilipeppr/astYW/show/light -->
+                    </div>
+                    <!-- end Basic Serial Port Communicator -->
+                </div>
+
+                <div class="col-lg-6">
+
+                    <!-- Terminal Workspace -->
+                    <div id="com-chilipeppr-wsgrid-terminal" class="com-chilipeppr-wspicker-item">
+
+                        <div id="com-chilipeppr-workspace-terminal-billboard" class="">
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">Terminal Workspace</h4>
+
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/terminal">chilipeppr.com/terminal</a>
+
+                                </p>
+                                <div class="billboard-imgcontain" style="">
+                                    <a href="http://chilipeppr.com/terminal">
+                                        <div class="billboard-img" style="background-image: url('https://github.com/chilipeppr/workspace-terminal/raw/master/billboard.png')"></div>
+                                    </a>
+                                    <div class="billboard-stats2">
+                                    </div>
+
+                                </div>
+                                <p class="billboard-desc">
+                                    This workspace lets you interact with the command line of the host running the Serial Port JSON Server. Useful for interacting with your host hardware like the Raspberry Pi from Javascript.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end Basic Serial Port Communicator -->
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <!-- NodeMCU workspace -->
+                    <div id="com-chilipeppr-wsgrid-nodemcu" class="com-chilipeppr-wspicker-item">
+                        <!-- start chilipeppr.load() url: http://raw.githubusercontent.com/chilipeppr/workspace-nodemcu/master/auto-generated-workspace.html -->
+
+
+                        <div id="com-chilipeppr-workspace-nodemcu-billboard" class="">
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">NodeMCU Workspace</h4>
+
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/nodemcu">chilipeppr.com/nodemcu</a>
+
+                                </p>
+                                <div class="billboard-imgcontain" style="">
+                                    <a href="http://chilipeppr.com/nodemcu">
+                                        <div class="billboard-img" style="background-image: url('https://github.com/chilipeppr/workspace-nodemcu/raw/master/nodemcu.jpg')"></div>
+                                    </a>
+                                    <div class="billboard-stats2">
+                                    </div>
+
+                                </div>
+                                <p class="billboard-desc">
+                                    A ChiliPeppr Workspace that lets you interact with the NodeMCU device. The NodeMCU device is an ESP8266 wifi module with an attached USB serial port bridge so you can easily use it and program it from your computer via the serial port. Thus, the NodeMCU
+                                    works brilliantly with ChiliPeppr. Secondly, the NodeMCU has the Lua language preloaded onto the ESP8266 so you can easily program the device.This workspace gives you convenience methods for programming the NodeMCU
+                                    device. You can buy the ESP8266 on ebay.com or aliexpress.com.
+
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- end chilipeppr.load() url: http://raw.githubusercontent.com/chilipeppr/workspace-nodemcu/master/auto-generated-workspace.html -->
+                    </div>
+                    <!-- end NodeMCU workspace -->
+                </div>
+
+            </div>
+
+
+            <h3> Popular Workspace User Contributions</h3>
+            <div id="usercontrib">
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <!-- TinyG Tablet -->
+                        <div id="com-chilipeppr-wsgrid-tinygtablet" class="com-chilipeppr-wspicker-item">
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">TinyG Tablet Workspace</h4>
+
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/tinygtablet">chilipeppr.com/tinygtablet</a>
+
+                                </p>
+                                <div class="billboard-imgcontain" style="">
+                                    <a href="http://chilipeppr.com/tinygtablet">
+                                        <div class="billboard-img" style="background-image: url('//i2dcui.appspot.com/img/tinygtablet.jpg')"></div>
+                                    </a>
+                                    <div class="billboard-stats2">
+                                    </div>
+
+                                </div>
+                                <p class="billboard-desc">
+                                    This workspace is ideal for your tablet so you can jog around your TinyG CNC machine. It is just the main TinyG workspace with alternate CSS for a better tablet experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <!-- Grbl Raspicam -->
+                        <div id="com-chilipeppr-wsgrid-webrtcserver" class="com-chilipeppr-wspicker-item ">
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">Grbl Raspicam</h4>
+
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/grbl_raspicam">chilipeppr.com/grbl_raspicam</a>
+
+                                </p>
+                                <div class="billboard-imgcontain" style="">
+                                    <a href="http://chilipeppr.com/grbl_raspicam">
+                                        <div class="billboard-img" style="background-image: url('https://www.adafruit.com/images/970x728/1367-09.jpg')"></div>
+                                    </a>
+                                    <div class="billboard-stats2">
+                                    </div>
+
+                                </div>
+                                <p class="billboard-desc">
+                                    Let's you watch your Raspicam inside an alternate version of the Grbl Workspace.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-3">
+                        <!-- Xpix -->
+                        <div id="com-chilipeppr-wsgrid-xpix" class="com-chilipeppr-wspicker-item ">
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">Xpix Eagle PCB Workspace</h4>
+
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/xpix">chilipeppr.com/xpix</a>
+
+                                </p>
+                                <div class="billboard-imgcontain" style="">
+                                    <a href="http://chilipeppr.com/xpix">
+                                        <div class="billboard-img" style="background-image: url('//i2dcui.appspot.com/img/dispenser.jpg')"></div>
+                                    </a>
+                                    <div class="billboard-stats2">
+                                    </div>
+
+                                </div>
+                                <p class="billboard-desc">
+                                    Created by Frank Herrmann, this is an advanced workspace geared towards extending the Eagle BRD Import widget to support better milling, drilling, solder paste dispensing, and pick and place.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <!-- TigerShark -->
+                        <div id="com-chilipeppr-wsgrid-tigershark" class="com-chilipeppr-wspicker-item ">
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">Tigershark Workspace</h4>
+
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/tigershark3d">chilipeppr.com/tigershark3d</a>
+
+                                </p>
+                                <div class="billboard-imgcontain" style="">
+                                    <a href="http://chilipeppr.com/tigershark3d">
+                                        <div class="billboard-img" style="background-image: url('//i2dcui.appspot.com/img/tigershark.png')"></div>
+                                    </a>
+                                    <div class="billboard-stats2">
+                                    </div>
+
+                                </div>
+                                <p class="billboard-desc">
+                                    This workspace is geared towards 3D printers and the Tigershark 3D printing control board which is based on TinyG.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- end Workspace Grid -->
+
+
+            <!-- end chilipeppr.load() url: http://fiddle.jshell.net/chilipeppr/8UwSX/show/light -->
+        </div>
+    </div>
+
+    <div class="jumbotron spjs-img" style="background-image: url('//i2dcui.appspot.com/img/serialdevices_40pct.jpg')">
+        <h2>Serial Port JSON Server</h2>
+        <p>
+            The heart of ChiliPeppr is a server that links your serial port devices and your host controller like a Raspberry Pi via websockets to your browser.
+        </p>
+        <button class="btn btn-default btn-lg downloadSpjs">
+            Download SPJS from Github
+        </button>
+    </div>
+
+
+    <div class="container-fluid com-chilipeppr-wsgrid" style="padding:8%;">
+        <div class="row">
+            <div class="col-md-6">
+                <p><a href="http://chilipeppr.com">ChiliPeppr</a> is a hardware fiddle, meaning it is a website that lets you easily create a workspace to fiddle with your hardware from software. ChiliPeppr provides a <a href="https://github.com/johnlauer/serial-port-json-server">Serial Port JSON Server</a>                    that you run locally on your computer, or remotely on another computer, to connect to the serial port of your hardware like an Arduino or other microcontroller.</p>
+                <p>You then create a workspace at ChiliPeppr.com that connects to your hardware by starting from scratch or forking somebody else's workspace that is close to what you are after. Then you write widgets in Javascript that interact with your
+                    hardware by forking the base template widget or forking another widget that is similar to what you are trying to build.</p>
+            </div>
+            <div class="col-md-6">
+                <p>ChiliPeppr is massively capable such that the workspaces for
+                    <a href="http://chilipeppr.com/tinyg">TinyG</a> and <a href="http://chilipeppr.com/grbl">Grbl</a> CNC controllers have become full-fledged CNC machine management software used by tens of thousands.</p>
+                <p>ChiliPeppr has inspired many people in the hardware/software world to use the browser and Javascript as the foundation for interacting with hardware. The Arduino team in Italy caught wind of ChiliPeppr and now ChiliPeppr's Serial Port
+                    JSON Server is the basis for the
+                    <a href="https://create.arduino.cc/">Arduino's new web IDE</a>. If the Arduino team is excited about building on top of ChiliPeppr, what will you build on top of it?</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="jumbotron">
+        <h4>What will you build?</h4>
+    </div>
+</div>
