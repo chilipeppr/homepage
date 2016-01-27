@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
 <style type="text/css">
     #root #mainnav {
         margin-bottom: 0;
@@ -72,15 +76,65 @@
         background-size: cover;
         /* opacity: 0.5; */
     }
+    
+    .billboard-content {
+        padding: 6px 20px;
+    }
+    
+    .billboard-title {
+        margin-bottom: 6px;
+    }
+    
+    .billboard-url {
+        /* font-size: 9px; */
+        padding-top: 0px;
+        margin-bottom: 6px;
+        font-size: 12px;
+    }
+    
+    .billboard-img {
+        border: 0px solid red;
+        border-radius: 5px;
+        position: relative;
+        width: 100%;
+        height: 160px;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .billboard-imgcontain {
+        border: 0px solid red;
+        position: relative;
+    }
+    
+    .billboard-stats {
+        position: absolute;
+        top: 4px;
+        left: 10px;
+    }
+    
+    .billboard-desc {
+        /* font-size:11px; */
+    }
+    
+    .billboard-detail-title {
+        font-weight: bold;
+    }
+    
+    .billboard-stats2 {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 4px 10px 10px 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 </style>
 
 <script type="text/javascript">
     //<![CDATA[
 
     cprequire(["chilipeppr_ready"], function() {
-
-        chilipeppr.load("#com-chilipeppr-homepage-wspicker",
-            "http://fiddle.jshell.net/chilipeppr/8UwSX/show/light");
 
         $('.downloadSpjs').click(function() {
             console.log("download spjs");
@@ -217,7 +271,7 @@
                                 </p>
                                 <div class="com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
                                     <a href="http://chilipeppr.com/tinyg">
-                                        <div class="com-chilipeppr-ws-billboard-img" style="background-image: url('http://chilipeppr.com/img/tinyg.jpg')"></div>
+                                        <div class="billboard-img com-chilipeppr-ws-billboard-img" style="background-image: url('http://chilipeppr.com/img/tinyg.jpg')"></div>
                                     </a>
                                     <div class="com-chilipeppr-ws-billboard-stats2">
 
@@ -244,9 +298,9 @@
                                 <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/grbl">chilipeppr.com/grbl</a>
 
                                 </p>
-                                <div class="com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                <div class="billboard-imgcontain com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
                                     <a href="http://chilipeppr.com/grbl">
-                                        <div class="com-chilipeppr-ws-billboard-img" style="background-image: url('https://www.synthetos.com/wp-content/uploads/2013/02/grblShieldBundle800-800x360.jpg')"></div>
+                                        <div class="billboard-img com-chilipeppr-ws-billboard-img" style="background-image: url('https://www.synthetos.com/wp-content/uploads/2013/02/grblShieldBundle800-800x360.jpg')"></div>
                                     </a>
                                     <div class="com-chilipeppr-ws-billboard-stats2">
 
@@ -276,9 +330,9 @@
                                 <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/serialport">chilipeppr.com/serialport</a>
 
                                 </p>
-                                <div class="com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                <div class="billboard-imgcontain com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
                                     <a href="http://chilipeppr.com/serialport">
-                                        <div class="com-chilipeppr-ws-billboard-img" style="background-image: url('http://arduino.cc/es/uploads/Main/arduino_uno_test.jpg')"></div>
+                                        <div class="billboard-img com-chilipeppr-ws-billboard-img" style="background-image: url('http://arduino.cc/es/uploads/Main/arduino_uno_test.jpg')"></div>
                                     </a>
                                     <div class="com-chilipeppr-ws-billboard-stats2">
 
@@ -513,4 +567,45 @@
     <div class="jumbotron">
         <h4>What will you build?</h4>
     </div>
+
+    <div class="container-fluid com-chilipeppr-wsgrid" style="padding:8%;">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="center">Get started with your own workspace by forking a sample workspace.</p>
+            </div>
+            <p>&nbsp;<br>&nbsp;</p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!--<div class="billboard-img" style="background-image: url('//github.com/chilipeppr/workspace-sample/raw/master/screenshot.png')"></div>-->
+                <img style="width:100%" src="//github.com/chilipeppr/workspace-sample/raw/master/screenshot.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>&nbsp;<br>&nbsp;</p>
+                <h2 class="center"><a class="btn btn-lg btn-primary lgbtn" href="https://github.com/chilipeppr/workspace-sample">Fork Sample Workspace on Github</a></h2>
+                <h2 class="center"><a class="btn btn-lg btn-primary lgbtn" href="https://c9.io">Open Github Project Inside Cloud9</a></h2>
+                <h2 class="center"><a class="btn btn-lg btn-primary lgbtn" href="http://chilipeppr.com/sample">Pick a New Workspace Name</a></h2>
+                
+            </div>
+        </div>
+    </div>
+
+<style type="text/css">
+.center {
+    text-align: center;
+}
+a.lgbtn {
+    padding: 16px 40px;
+    font-size: 25px;
+}
+.circle {
+    font-size:36px;
+    background-color:green;
+    border-radius:30px;
+    padding:20px;
+}
+</style>
+
 </div>
