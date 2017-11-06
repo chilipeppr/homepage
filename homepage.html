@@ -251,6 +251,51 @@
                     /* overflow:ellipsis; */
                 }
             }
+            
+            .billboard-content {
+                padding: 6px 20px;
+            }
+            .billboard-title {
+                margin-bottom:6px;
+            }
+            .billboard-url {
+                /* font-size: 9px; */
+                padding-top:0px;
+                margin-bottom:6px;
+                font-size:12px;
+            }
+            .billboard-img {
+                border:0px solid red;
+                border-radius: 5px;
+                position: relative;
+                width:100%;
+                height:160px;
+                background-position: center;
+                background-size: cover;
+            }
+            .billboard-imgcontain {
+                border:0px solid red; 
+                position: relative;
+            }
+            .billboard-stats {
+                position: absolute;
+                top: 4px;
+                left: 10px;
+            }
+            .billboard-desc {
+                /* font-size:11px; */
+            }
+            .billboard-detail-title {
+                font-weight: bold;
+            }
+            .billboard-stats2 {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                padding: 4px 10px 10px 10px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
         </style>
 
 
@@ -263,22 +308,22 @@
                     <div id="com-chilipeppr-wsgrid-tinyg" class="com-chilipeppr-wspicker-item">
 
                         <div id="com-chilipeppr-ws-billboard-tinyg">
-                            <div class="com-chilipeppr-ws-billboard-content">
-                                <h4 class="com-chilipeppr-ws-billboard-title" style="">TinyG Workspace</h4>
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">TinyG Workspace</h4>
 
-                                <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/tinyg">chilipeppr.com/tinyg</a>
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/tinyg">chilipeppr.com/tinyg</a>
 
                                 </p>
-                                <div class="com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                <div class="billboard-imgcontain" xstyle="border:0px solid red; position: relative;">
                                     <a href="http://chilipeppr.com/tinyg">
-                                        <div class="billboard-img com-chilipeppr-ws-billboard-img" style="background-image: url('http://chilipeppr.com/img/tinyg.jpg')"></div>
+                                        <div class="billboard-img" style="background-image: url('http://chilipeppr.com/img/tinyg.jpg')"></div>
                                     </a>
-                                    <div class="com-chilipeppr-ws-billboard-stats2">
+                                    <div class="billboard-stats2">
 
                                     </div>
                                 </div>
                                 <!-- end img div container -->
-                                <p class="com-chilipeppr-ws-billboard-desc">This workspace is a full-blown Gcode sender for your TinyG. The workspace connects to your TinyG via the serial port over the ChiliPeppr Serial Port JSON Server. It lets you view your Gcode in 3D, view the XYZA positions,
+                                <p class="billboard-desc">This workspace is a full-blown Gcode sender for your TinyG. The workspace connects to your TinyG via the serial port over the ChiliPeppr Serial Port JSON Server. It lets you view your Gcode in 3D, view the XYZA positions,
                                     perform jogging, and see advanced real-time details from the TinyG.</p>
                             </div>
                         </div>
@@ -292,22 +337,22 @@
                     <div id="com-chilipeppr-wsgrid-grbl" class="com-chilipeppr-wspicker-item">
 
                         <div id="com-chilipeppr-ws-billboard-grbl">
-                            <div class="com-chilipeppr-ws-billboard-content">
-                                <h4 class="com-chilipeppr-ws-billboard-title" style="">Grbl Workspace</h4>
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">Grbl Workspace</h4>
 
-                                <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/grbl">chilipeppr.com/grbl</a>
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/grbl">chilipeppr.com/grbl</a>
 
                                 </p>
-                                <div class="billboard-imgcontain com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                <div class="billboard-imgcontain" xstyle="border:0px solid red; position: relative;">
                                     <a href="http://chilipeppr.com/grbl">
-                                        <div class="billboard-img com-chilipeppr-ws-billboard-img" style="background-image: url('https://www.synthetos.com/wp-content/uploads/2013/02/grblShieldBundle800-800x360.jpg')"></div>
+                                        <div class="billboard-img" style="background-image: url('https://www.synthetos.com/wp-content/uploads/2013/02/grblShieldBundle800-800x360.jpg')"></div>
                                     </a>
-                                    <div class="com-chilipeppr-ws-billboard-stats2">
+                                    <div class="billboard-stats2">
 
                                     </div>
                                 </div>
                                 <!-- end img div container -->
-                                <p class="com-chilipeppr-ws-billboard-desc">Grbl devices are now supported inside ChiliPeppr. The workspace connects to your Arduino via the serial port over the ChiliPeppr Serial Port JSON Server. Maintained by Jarret Luft.</p>
+                                <p class="billboard-desc">Grbl devices are now supported inside ChiliPeppr. The workspace connects to your Arduino via the serial port over the ChiliPeppr Serial Port JSON Server. Maintained by Jarret Luft.</p>
                             </div>
                         </div>
 
@@ -324,22 +369,22 @@
                     <div id="com-chilipeppr-wsgrid-serialport" class="com-chilipeppr-wspicker-item">
 
                         <div id="com-chilipeppr-ws-billboard-serialport">
-                            <div class="com-chilipeppr-ws-billboard-content">
-                                <h4 class="com-chilipeppr-ws-billboard-title" style="">Serial Port Workspace</h4>
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">Serial Port Workspace</h4>
 
-                                <p class="com-chilipeppr-ws-billboard-url" style=""><a href="http://chilipeppr.com/serialport">chilipeppr.com/serialport</a>
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/serialport">chilipeppr.com/serialport</a>
 
                                 </p>
-                                <div class="billboard-imgcontain com-chilipeppr-ws-billboard-imgcontain" style="border:0px solid red; position: relative;">
+                                <div class="billboard-imgcontain" xstyle="border:0px solid red; position: relative;">
                                     <a href="http://chilipeppr.com/serialport">
-                                        <div class="billboard-img com-chilipeppr-ws-billboard-img" style="background-image: url('http://arduino.cc/es/uploads/Main/arduino_uno_test.jpg')"></div>
+                                        <div class="billboard-img" style="background-image: url('http://arduino.cc/es/uploads/Main/arduino_uno_test.jpg')"></div>
                                     </a>
-                                    <div class="com-chilipeppr-ws-billboard-stats2">
+                                    <div class="billboard-stats2">
 
                                     </div>
                                 </div>
                                 <!-- end img div container -->
-                                <p class="com-chilipeppr-ws-billboard-desc">This is a workspace for a generic Serial Port console for ChiliPeppr's Hardware Fiddle. This workspace depends on ChiliPeppr's Serial Port JSON Server.</p>
+                                <p class="billboard-desc">This is a workspace for a generic Serial Port console for ChiliPeppr's Hardware Fiddle. This workspace depends on ChiliPeppr's Serial Port JSON Server.</p>
                             </div>
                         </div>
 
@@ -390,7 +435,7 @@
 
                         <div id="com-chilipeppr-workspace-nodemcu-billboard" class="">
                             <div class="billboard-content">
-                                <h4 class="billboard-title" style="">NodeMCU Workspace</h4>
+                                <h4 class="billboard-title" style="">ESP8266 for Lua (NodeMCU) Workspace</h4>
 
                                 <p class="billboard-url" style=""><a href="http://chilipeppr.com/nodemcu">chilipeppr.com/nodemcu</a>
 
@@ -416,6 +461,43 @@
                         <!-- end chilipeppr.load() url: http://raw.githubusercontent.com/chilipeppr/workspace-nodemcu/master/auto-generated-workspace.html -->
                     </div>
                     <!-- end NodeMCU workspace -->
+                </div>
+                
+                <div class="col-lg-6">
+
+                    <!-- esp32 workspace -->
+                    <div id="com-chilipeppr-wsgrid-esp32" class="com-chilipeppr-wspicker-item">
+                        <!-- start chilipeppr.load() url: http://raw.githubusercontent.com/chilipeppr/workspace-esp32-lua/master/auto-generated-workspace.html -->
+
+
+                        <div id="com-chilipeppr-workspace-nodemcu-billboard" class="">
+                            <div class="billboard-content">
+                                <h4 class="billboard-title" style="">ESP32 for Lua (NodeMCU) Workspace</h4>
+
+                                <p class="billboard-url" style=""><a href="http://chilipeppr.com/esp32">chilipeppr.com/esp32</a>
+
+                                </p>
+                                <div class="billboard-imgcontain" style="">
+                                    <a href="http://chilipeppr.com/esp32">
+                                        <div class="billboard-img" style="background-image: url('https://github.com/chilipeppr/workspace-esp32-lua/raw/master/nodemcu.jpg')"></div>
+                                    </a>
+                                    <div class="billboard-stats2">
+                                    </div>
+
+                                </div>
+                                <p class="billboard-desc">
+                                    A ChiliPeppr Workspace that lets you interact with an ESP32 device. The device is an ESP32 wifi module with an attached USB serial port bridge so you can easily use it and program it from your computer via the serial port. Thus, the ESP32
+                                    works brilliantly with ChiliPeppr. Secondly, the ESP32 has the Lua language preloaded onto it so you can easily program the device. This workspace gives you convenience methods for programming the ES{32
+                                    device. 
+
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- end chilipeppr.load() url: http://raw.githubusercontent.com/chilipeppr/workspace-nodemcu/master/auto-generated-workspace.html -->
+                    </div>
+                    <!-- end esp workspace -->
                 </div>
 
             </div>
